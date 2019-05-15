@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NAC2</title>
+    <link rel="stylesheet" href="./node_modules/uikit/dist/css/uikit.min.css">
+    <style type="text/css" media="screen">
+table.notas, table.notas th, table.notas>td, table.notas>th{
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.notas td{
+  width: 130px;
+}
+fieldset{
+  width: 300px;
+}
+
+*{
+  font-size: large;
+}
+h1{
+  font-size: 40px;
+}
+#sistema{
+  margin-top: 50px;
+}
+    </style>
+  </head>
+  <body class="uk-container">
+    <h1>NAC2 - Optimization Technology</h1>
+    <p class="uk-article-lead">
+      Abaixo, nesta página, você encontra um sistema de cálculo de notas de alunos. Esse sistema foi feito puramente com JavaScript ES5 (tradicional).
+    Sua tarefa é replicar esse sistema para que utilize o ES6. Requisitos:
+    </p>
+    <ul class="uk-list uk-list-bullet">
+      <li>Configurar ES6 via webpack e npm</li>
+      <li>Divir o código em, pelo menos, dois arquivos e utilizar a notação ES6 para exportação e importação de códigos</li>
+      <li>Utilizar, pelo menos, 1 Arrow Function</li>
+      <li>Utilizar, pelo menos, 1 classe (class)</li>
+      <li>Utilizar a função <i>map</i> (de vetores)</li>
+    </ul>
+    <p>Outras instruções você encontrará em: <a href="http://notepad.pw/optnac2" target="_blank">http://notapad.pw/optnac2</a></p>
+
+
+    <div id="sistema">
+
+      <div id="aluno">
+        <fieldset>
+          <legend>
+            Dados do Aluno
+          </legend>
+          <div>
+            <table>
+
+              <tr>
+                <td>Nome:</td><td><input type="text" value="" name="" id="txtNome"/></td>
+              </tr><tr>
+                <td>Nota PS:</td><td><input type="text" value="" name="" id="txtPS"/></td>
+              </tr><tr>
+                <td>Nota Nac1:</td><td><input type="text" value="" name="" id="txtNAC1"/></td>
+              </tr><tr>
+                <td>Nota Nac2:</td><td><input type="text" value="" name="" id="txtNAC2"/></td>
+              </tr><tr>
+                <td>Nota Nac3:</td><td><input type="text" value="" name="" id="txtNAC3"/></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right">
+                  <input type="button" value="Adicionar" name="" id="btnAdiciona"/>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+      </div>
+      <div>
+        <table class="notas" border=1>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Nota PS</th>
+              <th>Nota NAC1</th>
+              <th>Nota NAC2</th>
+              <th>Nota NAC3</th>
+              <th>Nota Final</th>
+            </tr>
+          </thead>
+          <tbody id="lista">
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5" align="right">Média:</td>
+              <td id="media"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <script src="./dist/bundle.js"></script>
+
+    </script>
+  </body>
+</html>
